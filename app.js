@@ -16,6 +16,11 @@ db.authenticate()
 //Database connection end
 
 const app = express();
+
+//Express handlebar
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view enginer", "handlerbars");
+
 app.get("/", (req, res) => res.send("INDEX"));
 
 //Gig Routes

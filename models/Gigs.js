@@ -5,7 +5,7 @@ const Gigs = db.define("gig", {
   title: {
     type: Sequelize.STRING
   },
-  technology: {
+  technologies: {
     type: Sequelize.STRING
   },
   budget: {
@@ -14,9 +14,9 @@ const Gigs = db.define("gig", {
   description: {
     type: Sequelize.STRING
   },
-  email: {
+  contact_email: {
     type: Sequelize.STRING
   }
 });
 
-module.exports(Gigs);
+module.exports = Gigs;
