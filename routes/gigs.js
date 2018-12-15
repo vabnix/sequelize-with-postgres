@@ -6,9 +6,11 @@ const Gig = require("../models/Gigs");
 //Getting the data from gigs
 router.get("/", (req, res) => {
   Gig.findAll()
-    .then(gigs => {
-      res.sendStatus(200);
-    })
+    .then(gigs =>
+      res.render("gigs", {
+        gigs
+      })
+    )
     .catch(err => {
       console.logs("Unable to get the data from database ", err);
     });
