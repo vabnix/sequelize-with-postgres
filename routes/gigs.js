@@ -16,8 +16,13 @@ router.get("/", (req, res) => {
     });
 });
 
-//Adding data
+//Display the form
 router.get("/add", (req, res) => {
+  res.render("add");
+});
+
+//Adding data
+router.post("/add", (req, res) => {
   const data = {
     title: "Web Developer - Junior",
     technologies: "react, javascript, html, css",
