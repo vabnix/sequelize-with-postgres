@@ -17,12 +17,12 @@ router.get("/", (req, res) => {
 });
 
 //Display the form
-// router.get("/add", (req, res) => {
-//   res.render("add");
-// });
+router.get("/add", (req, res) => {
+  res.render("add");
+});
 
 //Adding data
-router.get("/add", (req, res) => {
+router.post("/add", (req, res) => {
   const data = {
     title: "Web Developer - Lead",
     technologies: "react, javascript, html, css",
